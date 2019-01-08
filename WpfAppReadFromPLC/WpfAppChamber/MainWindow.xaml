@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfAppChamber.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppChamber"
+        mc:Ignorable="d"
+        Title="ODCZYTUJ Z PLC" Height="450" Width="800" Icon="Images/bury.png">
+    <Grid>
+        <TabControl>
+            <TabItem Header="General">
+                <Grid>
+                    <Button Content="Połącz z Bazą Danych" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="140" Height="40" Click="Button_Click"/>
+                    <DataGrid Name="dataGrid" HorizontalAlignment="Left" Height="240" Margin="10,140,0,0" VerticalAlignment="Top" Width="760"/>
+                    <Button Content="Odczytaj rejestr" HorizontalAlignment="Left" Margin="610,20,0,0" VerticalAlignment="Top" Width="162" Click="Button_Click_1" Height="40"/>
+                    <TextBox Name="ipAdres" HorizontalAlignment="Left" Height="27" Margin="160,30,0,0" TextWrapping="Wrap" Text="10.1.13.105" VerticalAlignment="Top" Width="100" FontSize="14" RenderTransformOrigin="0.44,0.37"/>
+                    <TextBox Name="Port" HorizontalAlignment="Left" Height="27" Margin="270,30,0,0" TextWrapping="Wrap" Text="502" VerticalAlignment="Top" Width="100" FontSize="14"/>
+                    <TextBox Name="startPLCAdres" HorizontalAlignment="Left" Height="27" Margin="380,30,0,0" TextWrapping="Wrap" Text="D100" VerticalAlignment="Top" Width="100" FontSize="14"/>
+                    <TextBox Name="iloscPLCAdres" HorizontalAlignment="Left" Height="27" Margin="490,30,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="100" FontSize="14"/>
+                    <TextBlock HorizontalAlignment="Left" Height="18" Margin="160,10,0,0" TextWrapping="Wrap" Text="Adres IP:" VerticalAlignment="Top" Width="100"/>
+                    <TextBlock HorizontalAlignment="Left" Height="18" Margin="270,10,0,0" TextWrapping="Wrap" Text="Port:" VerticalAlignment="Top" Width="100"/>
+                    <TextBlock HorizontalAlignment="Left" Height="18" Margin="380,10,0,0" TextWrapping="Wrap" Text="Adres startowy:" VerticalAlignment="Top" Width="100"/>
+                    <TextBlock HorizontalAlignment="Left" Height="18" Margin="490,10,0,0" TextWrapping="Wrap" Text="Ilość adresów:" VerticalAlignment="Top" Width="100"/>
+                    <TextBox Name="textBOX" HorizontalAlignment="Left" Height="50" Margin="10,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="760"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
